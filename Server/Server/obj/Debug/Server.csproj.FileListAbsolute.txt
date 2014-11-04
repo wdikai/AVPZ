@@ -1,0 +1,7 @@
+C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\bin\Server.dll
+C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\bin\Server.pdb
+C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\obj\Debug\Server.dll
+C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\obj\Debug\Server.pdb
+C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\bin\Newtonsoft.Json.dll
+C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\bin\log4net.dll
+C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\bin\log4net.xml
