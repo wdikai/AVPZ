@@ -1,0 +1,10 @@
+C:\Users\Артем\Documents\HeroicBatle\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Артем\Documents\HeroicBatle\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Артем\Documents\HeroicBatle\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Артем\Documents\HeroicBatle\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Артем\Documents\HeroicBatle\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Артем\Documents\HeroicBatle\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Артем\Documents\HeroicBatle\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Артем\Documents\HeroicBatle\obj\Debug\UnityVS.HeroicBatle.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Артем\Documents\HeroicBatle\obj\Debug\Assembly-CSharp.dll
+C:\Users\Артем\Documents\HeroicBatle\obj\Debug\Assembly-CSharp.pdb
