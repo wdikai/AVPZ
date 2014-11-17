@@ -15,6 +15,11 @@ public class State3Controller : EventController
             {
                 this.enabledMenu = false;
             }
+            if (GUI.Button(new Rect(350, 370, 50, 20), "В бой"))
+            {
+                LevelSwicher ls = new LevelSwicher();
+                ls.SwichLevel(1);
+            }
             GUI.EndGroup();
         }
     }

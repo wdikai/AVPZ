@@ -7,3 +7,12 @@ C:\Users\Артем\Documents\HeroicBatle\Temp\UnityVS_bin\Debug\UnityEditor.xml
 C:\Users\Артем\Documents\HeroicBatle\obj\Debug\UnityVS.HeroicBatle.CSharp.Plugins.csprojResolveAssemblyReference.cache
 C:\Users\Артем\Documents\HeroicBatle\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\Артем\Documents\HeroicBatle\obj\Debug\Assembly-CSharp-firstpass.pdb
+E:\Projects\Unity\HeroicBatle\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.dll
+E:\Projects\Unity\HeroicBatle\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+E:\Projects\Unity\HeroicBatle\Temp\UnityVS_bin\Debug\UnityEditor.dll
+E:\Projects\Unity\HeroicBatle\Temp\UnityVS_bin\Debug\UnityEngine.dll
+E:\Projects\Unity\HeroicBatle\Temp\UnityVS_bin\Debug\UnityEngine.xml
+E:\Projects\Unity\HeroicBatle\Temp\UnityVS_bin\Debug\UnityEditor.xml
+E:\Projects\Unity\HeroicBatle\obj\Debug\UnityVS.HeroicBatle.CSharp.Plugins.csprojResolveAssemblyReference.cache
+E:\Projects\Unity\HeroicBatle\obj\Debug\Assembly-CSharp-firstpass.dll
+E:\Projects\Unity\HeroicBatle\obj\Debug\Assembly-CSharp-firstpass.pdb

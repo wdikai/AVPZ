@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{12F44184-A422-5F27-22E6-507969043F15}</ProjectGuid>
+	<ProjectGuid>{0E0DE6DC-6540-114C-EC46-0C80EDBF8196}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -39,35 +39,32 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraSwich.cs" />
      <Compile Include="Assets\Scripts\EventController.cs" />
+     <Compile Include="Assets\Scripts\LevelSwicher.cs" />
      <Compile Include="Assets\Scripts\MainMenuGUI.cs" />
-     <Compile Include="Assets\Scripts\Models\UserModel.cs" />
-     <Compile Include="Assets\Scripts\Requests\IRequest.cs" />
-     <Compile Include="Assets\Scripts\Requests\RequestManager.cs" />
-     <Compile Include="Assets\Scripts\Requests\SignIn.cs" />
      <Compile Include="Assets\Scripts\State1Controller.cs" />
      <Compile Include="Assets\Scripts\State2Controller.cs" />
      <Compile Include="Assets\Scripts\State3Controller.cs" />
      <Compile Include="Assets\Scripts\StatusBar.cs" />
      <Compile Include="Assets\Scripts\TextField.cs" />
-     <Compile Include="Assets\Scripts\Validator\UserValidator.cs" />
      <None Include="Assets\Models\Chair\readme.txt" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{079D398E-4AFC-CD7E-7881-F923D075EBD1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{63D477AA-B454-87E3-343F-04BE8711EF53}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

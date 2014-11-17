@@ -12,7 +12,6 @@ public class State2Controller : EventController
             GUI.BeginGroup(new Rect(500, 50, 700, 620));
             GUI.Box(new Rect(0, 0, 700, 620), "");
             GUI.Label(new Rect(10, 10, 300, 22), "Трактирщик");
-
             GUI.Button(new Rect(10, 40, 50,60 ), LuchTexture2D);
             GUI.Button(new Rect(10, 140, 50, 60), "Головорез");
             GUI.Button(new Rect(10, 240, 50, 60),VarvarTexture2D);
