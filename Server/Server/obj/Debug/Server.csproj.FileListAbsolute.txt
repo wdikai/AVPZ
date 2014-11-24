@@ -4,3 +4,10 @@ C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\obj\Debug
 C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\obj\Debug\Server.pdb
 C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\bin\Newtonsoft.Json.dll
 C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\Server\bin\log4net.dll
+D:\GitRepository\Server\Server\bin\Server.dll
+D:\GitRepository\Server\Server\bin\Server.pdb
+D:\GitRepository\Server\Server\bin\log4net.dll
+D:\GitRepository\Server\Server\bin\Newtonsoft.Json.dll
+D:\GitRepository\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\GitRepository\Server\Server\obj\Debug\Server.dll
+D:\GitRepository\Server\Server\obj\Debug\Server.pdb
