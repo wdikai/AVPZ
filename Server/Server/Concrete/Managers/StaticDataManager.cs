@@ -64,7 +64,7 @@ namespace Server.Concrete.Managers
     [ServerMethod]
     public JObject GetStaticData()
     {
-      return new JObject(new JProperty("response", JsonConvert.SerializeObject(_gameObjects)));
+      return new JObject(new JProperty(JsonConvert.SerializeObject(_gameObjects)));
     }
 
     public static bool IsValidUnit(int id)

@@ -10,4 +10,3 @@ D:\GitRepository\Server\HttpTestClient\obj\Debug\HttpTestClient.pdb
 D:\GitRepository\Server\HttpTestClient\bin\Debug\HttpTestClient.exe
 D:\GitRepository\Server\HttpTestClient\bin\Debug\HttpTestClient.pdb
 D:\GitRepository\Server\HttpTestClient\bin\Debug\Newtonsoft.Json.dll
-D:\GitRepository\Server\HttpTestClient\obj\Debug\HttpTestClient.csprojResolveAssemblyReference.cache
