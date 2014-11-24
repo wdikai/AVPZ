@@ -39,14 +39,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net">
-      <HintPath>D:\Server2\Dependencies\log4net.2.0.3\lib\net40-client\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -64,27 +66,38 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Libs\log4net.dll" />
     <Content Include="Libs\Newtonsoft.Json.dll" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\Entities\GameObject.cs" />
+    <Compile Include="Concrete\Entities\Resources.cs" />
+    <Compile Include="Concrete\Entities\SoliderData.cs" />
+    <Compile Include="Concrete\Entities\User.cs" />
+    <Compile Include="Concrete\Entities\UserGameData.cs" />
+    <Compile Include="Concrete\Managers\DatabaseManager.cs" />
+    <Compile Include="Concrete\Managers\ResourcesManager.cs" />
+    <Compile Include="Concrete\Managers\ShopManager.cs" />
+    <Compile Include="Concrete\Managers\StaticDataManager.cs" />
+    <Compile Include="Concrete\Managers\UserFixer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IServerListener.cs" />
-    <Compile Include="ServerHttpHandler.cs" />
+    <Compile Include="Abstract\IServerListener.cs" />
+    <Compile Include="Concrete\Connection\ServerHttpHandler.cs" />
     <Compile Include="MainHandler.ashx.cs">
       <DependentUpon>MainHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServerHttpIo.cs" />
-    <Compile Include="ServerHttpRequest.cs" />
-    <Compile Include="ServerMethodAtribute.cs" />
-    <Compile Include="ServerMethodHandler.cs" />
-    <Compile Include="ServerMethodManager.cs" />
-    <Compile Include="SignInManager.cs" />
+    <Compile Include="Concrete\Connection\ServerHttpIo.cs" />
+    <Compile Include="Concrete\Connection\ServerHttpRequest.cs" />
+    <Compile Include="Concrete\Connection\ServerMethodAtribute.cs" />
+    <Compile Include="Concrete\Connection\ServerMethodHandler.cs" />
+    <Compile Include="Concrete\Connection\ServerMethodManager.cs" />
+    <Compile Include="Concrete\Managers\SignInManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MainHandler.ashx" />
@@ -96,6 +109,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -4,4 +4,3 @@ C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\HttpTestClient\b
 C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\HttpTestClient\bin\Debug\Newtonsoft.Json.dll
 C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\HttpTestClient\obj\Debug\HttpTestClient.exe
 C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\HttpTestClient\obj\Debug\HttpTestClient.pdb
-C:\Users\n.chechin\Documents\Visual Studio 2012\Projects\Server\HttpTestClient\obj\Debug\HttpTestClient.csprojResolveAssemblyReference.cache
