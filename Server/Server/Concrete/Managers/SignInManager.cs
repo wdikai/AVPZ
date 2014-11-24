@@ -34,18 +34,18 @@ namespace Server
           }
         };
         DatabaseManager.AddUser(user);
-        response = new JObject(new JProperty(JObject.FromObject(user.GameData).ToString()));
+        response = new JObject(new JProperty("response", JObject.FromObject(user.GameData).ToString()));
         return response;
       }
 
       user = DatabaseManager.GetUser(login, password);
       if (user == null)
       {
-        response = new JObject(new JProperty(string.Format("Invalid password for user {0}", login)));
+        response = new JObject(new JProperty("response", string.Format("Invalid password for user {0}", login)));
         return response;
       }
       UserFixer.FixUser(user);
-      response = new JObject(new JProperty(JObject.FromObject(user.GameData).ToString()));
+      response = new JObject(new JProperty("response", JObject.FromObject(user.GameData).ToString()));
       return response;
     }
   }

@@ -16,10 +16,10 @@ namespace Server.Concrete.Managers
       var unitid = Int32.Parse(parameters["unitid"].ToString());
       var user = DatabaseManager.GetUser(userid);
       if (!StaticDataManager.IsValidUnit(unitid))
-        return new JObject(new JProperty("Invalid unit id"));
+        return new JObject(new JProperty("response","Invalid unit id"));
 
       if (!ResourcesManager.IsEnough(user, StaticDataManager.GetGameObjectbyId(unitid).SoliderData.Price))
-        return new JObject(new JProperty("Not enough resources"));
+        return new JObject(new JProperty("response", "Not enough resources"));
 
       if (user.GameData.AllTroops.ContainsKey(unitid))
         user.GameData.AllTroops[unitid]++;
@@ -28,7 +28,7 @@ namespace Server.Concrete.Managers
         user.GameData.AllTroops[unitid] = 1;
       }
       DatabaseManager.UpdateUserGameData(user);
-      return new JObject(new JProperty(JObject.FromObject(user.GameData).ToString()));
+      return new JObject(new JProperty("response", JObject.FromObject(user.GameData).ToString()));
     }
   }
 }
