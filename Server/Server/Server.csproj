@@ -73,15 +73,21 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\Battle\Battle.cs" />
     <Compile Include="Concrete\Entities\GameObject.cs" />
     <Compile Include="Concrete\Entities\Resources.cs" />
     <Compile Include="Concrete\Entities\SoliderData.cs" />
     <Compile Include="Concrete\Entities\User.cs" />
     <Compile Include="Concrete\Entities\UserGameData.cs" />
+    <Compile Include="Concrete\Entities\UserMessage.cs" />
+    <Compile Include="Concrete\Managers\BattleFinder.cs" />
     <Compile Include="Concrete\Managers\DatabaseManager.cs" />
+    <Compile Include="Concrete\Managers\MessageManager.cs" />
+    <Compile Include="Concrete\Managers\PollingManager.cs" />
     <Compile Include="Concrete\Managers\ResourcesManager.cs" />
     <Compile Include="Concrete\Managers\ShopManager.cs" />
     <Compile Include="Concrete\Managers\StaticDataManager.cs" />
+    <Compile Include="Concrete\Managers\UserCache.cs" />
     <Compile Include="Concrete\Managers\UserFixer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

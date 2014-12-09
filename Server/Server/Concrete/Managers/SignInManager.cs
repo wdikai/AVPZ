@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Server.Concrete.Entities;
 using Server.Concrete.Managers;
@@ -30,11 +31,11 @@ namespace Server
             SecondName = secondname,
             NickName = nickname,
             CurrentResources = new Resources{Crystals = 1, Gold = 300},
-            AllTroops = new Dictionary<int, int>()
+            AllTroops = new List<Troops>()
           }
         };
         DatabaseManager.AddUser(user);
-        response = new JObject(new JProperty("response", JObject.FromObject(user.GameData).ToString()));
+        response = new JObject(new JProperty("response", JObject.FromObject(user).ToString()));
         return response;
       }
 
@@ -45,7 +46,8 @@ namespace Server
         return response;
       }
       UserFixer.FixUser(user);
-      response = new JObject(new JProperty("response", JObject.FromObject(user.GameData).ToString()));
+      UserCache.UpdateOrAdd(user);
+      response = new JObject(new JProperty("response", JObject.FromObject(user).ToString()));
       return response;
     }
   }

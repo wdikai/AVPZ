@@ -15,6 +15,8 @@ namespace Server.Concrete.Managers
   {
     private static readonly string _mainDatabase = "Data Source=.\\SQLEXPRESS;Initial Catalog=ProjectDatabase;Persist Security Info=True;User ID=project;Password=project;";
 
+    #region User
+
     public static User GetUser(string login, string password)
     {
       var sqlConnection = new SqlConnection(_mainDatabase);
@@ -123,5 +125,95 @@ namespace Server.Concrete.Managers
         return Int32.Parse(sqlCommand.ExecuteScalar().ToString()) == 1;
       }
     }
+
+    public static bool FindUser(int uid)
+    {
+      using (var sqlConnection = new SqlConnection(_mainDatabase))
+      {
+        sqlConnection.Open();
+        var sqlCommand = new SqlCommand("SELECT COUNT(*) FROM Users WHERE Id = @id", sqlConnection);
+        sqlCommand.Parameters.AddWithValue("@id", uid);
+        return Int32.Parse(sqlCommand.ExecuteScalar().ToString()) == 1;
+      }
+    }
+
+    #endregion
+
+    #region UserMessage
+
+    public static List<UserMessage> GetUserMessages(long userId)
+    {
+      var sqlConnection = new SqlConnection(_mainDatabase);
+      var sqlCommand = new SqlCommand("SELECT * FROM UserMessages WHERE TargetId = @userid", sqlConnection);
+      sqlCommand.Parameters.AddWithValue("@userid", userId);
+      try
+      {
+        sqlConnection.Open();
+        var reader = sqlCommand.ExecuteReader();
+        var userMessages = new List<UserMessage>();
+        while (reader.Read())
+        {
+          var userMessage = new UserMessage
+          {
+            MessageId = Int32.Parse(reader["Id"].ToString()),
+            MessageTypeId = (UserMessageId) Int32.Parse(reader["TypeId"].ToString()),
+            TargetUserId = userId,
+            UserId = Int32.Parse(reader["OwnerId"].ToString())
+          };
+          userMessages.Add(userMessage);
+        }
+        return userMessages;
+      }
+      catch (Exception)
+      {
+        Console.WriteLine("Something went wrong reading user");
+        throw;
+      }
+      finally
+      {
+        if (sqlConnection.State == ConnectionState.Open)
+          sqlConnection.Close();
+      }
+    }
+
+    public static void RemoveUserMessages(List<int> messages)
+    {
+      var sqlConnection = new SqlConnection(_mainDatabase);
+      var sqlCommand = new SqlCommand("DELETE FROM UserMessages WHERE Id = @id", sqlConnection);
+      foreach (var userMessage in messages)
+      {
+        sqlCommand.Parameters.AddWithValue("@id", userMessage);
+        try
+        {
+          sqlConnection.Open();
+          sqlCommand.ExecuteNonQuery();
+        }
+        catch (Exception)
+        {
+          Console.WriteLine("Something went wrong reading user");
+          throw;
+        }
+        finally
+        {
+          if (sqlConnection.State == ConnectionState.Open)
+            sqlConnection.Close();
+        }
+      }
+    }
+
+    public static void AddUserMessage(UserMessage message)
+    {
+      using (var sqlConnection = new SqlConnection(_mainDatabase))
+      {
+        sqlConnection.Open();
+        var sqlCommand = new SqlCommand("INSERT INTO UserMessages (TypeId,TargetId,OwnerId) VALUES (@typeId,@targetId,@ownerId)", sqlConnection);
+        sqlCommand.Parameters.AddWithValue("@typeId", (int)message.MessageTypeId);
+        sqlCommand.Parameters.AddWithValue("@targetId", message.TargetUserId);
+        sqlCommand.Parameters.AddWithValue("@ownerId", message.UserId);
+        sqlCommand.ExecuteNonQuery();
+      }
+    }
+
+    #endregion
   }
 }

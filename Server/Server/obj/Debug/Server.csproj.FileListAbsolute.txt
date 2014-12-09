@@ -10,4 +10,3 @@ D:\GitRepository\Server\Server\bin\log4net.dll
 D:\GitRepository\Server\Server\bin\Newtonsoft.Json.dll
 D:\GitRepository\Server\Server\obj\Debug\Server.dll
 D:\GitRepository\Server\Server\obj\Debug\Server.pdb
-D:\GitRepository\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache

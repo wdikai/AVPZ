@@ -13,11 +13,11 @@ namespace Server.Concrete.Managers
       if (user.GameData == null)
         user.GameData = new UserGameData
         {
-          AllTroops = new Dictionary<int, int>(),
+          AllTroops = new List<Troops>(),
           CurrentResources = new Resources(),
         };
       if(user.GameData.AllTroops==null)
-        user.GameData.AllTroops = new Dictionary<int, int>();
+        user.GameData.AllTroops = new List<Troops>();
       if(user.GameData.CurrentResources==null)
         user.GameData.CurrentResources=new Resources();
 

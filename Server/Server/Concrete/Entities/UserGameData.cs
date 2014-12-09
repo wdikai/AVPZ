@@ -10,6 +10,14 @@ namespace Server.Concrete.Entities
     public string NickName;
 
     public Resources CurrentResources;
-    public Dictionary<int, int> AllTroops;
+    public List<Troops> AllTroops;
+
+    public List<UserMessage> PendingMessages;
+  }
+
+  public class Troops
+  {
+    public int Id;
+    public int Count;
   }
 }
