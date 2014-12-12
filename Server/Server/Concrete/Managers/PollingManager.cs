@@ -30,9 +30,11 @@ namespace Server.Concrete.Managers
         response = new JObject(new JProperty("response", "No changes"));
         return response;
       }
-
+      
+      user.GameData.PendingMessages.Clear();
       user.GameData.PendingMessages.AddRange(messages);
-      response = new JObject(new JProperty("response", JObject.FromObject(user).ToString()));
+      DatabaseManager.UpdateUserGameData(user);
+      response = new JObject(new JProperty("response", JsonConvert.SerializeObject(user.GameData.PendingMessages)));
       return response;
     }
   }

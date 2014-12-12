@@ -20,6 +20,8 @@ namespace Server.Concrete.Managers
         user.GameData.AllTroops = new List<Troops>();
       if(user.GameData.CurrentResources==null)
         user.GameData.CurrentResources=new Resources();
+      if(user.GameData.PendingMessages==null)
+        user.GameData.PendingMessages = new List<UserMessage>();
 
       DatabaseManager.UpdateUserGameData(user);
     }

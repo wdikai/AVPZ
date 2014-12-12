@@ -22,7 +22,7 @@ namespace Server.Concrete.Managers
       var sqlConnection = new SqlConnection(_mainDatabase);
       var sqlCommand = new SqlCommand("SELECT * FROM Users WHERE Login = @login AND Password = @password", sqlConnection);
       sqlCommand.Parameters.AddWithValue("@login", login);
-      sqlCommand.Parameters.AddWithValue("@password",password);
+      sqlCommand.Parameters.AddWithValue("@password", password);
       try
       {
         sqlConnection.Open();
@@ -49,7 +49,7 @@ namespace Server.Concrete.Managers
       }
       finally
       {
-        if(sqlConnection.State==ConnectionState.Open)
+        if (sqlConnection.State == ConnectionState.Open)
           sqlConnection.Close();
       }
     }
@@ -96,8 +96,8 @@ namespace Server.Concrete.Managers
       {
         sqlConnection.Open();
         var sqlCommand = new SqlCommand("INSERT INTO Users (Login,Password,JData) VALUES (@login,@password,@gamedata)", sqlConnection);
-        sqlCommand.Parameters.AddWithValue("@login",user.Login);
-        sqlCommand.Parameters.AddWithValue("@password",user.Password);
+        sqlCommand.Parameters.AddWithValue("@login", user.Login);
+        sqlCommand.Parameters.AddWithValue("@password", user.Password);
         sqlCommand.Parameters.AddWithValue("@gamedata", JObject.FromObject(user.GameData).ToString());
         sqlCommand.ExecuteNonQuery();
       }
@@ -156,7 +156,7 @@ namespace Server.Concrete.Managers
           var userMessage = new UserMessage
           {
             MessageId = Int32.Parse(reader["Id"].ToString()),
-            MessageTypeId = (UserMessageId) Int32.Parse(reader["TypeId"].ToString()),
+            MessageTypeId = (UserMessageId)Int32.Parse(reader["TypeId"].ToString()),
             TargetUserId = userId,
             UserId = Int32.Parse(reader["OwnerId"].ToString())
           };
@@ -180,24 +180,25 @@ namespace Server.Concrete.Managers
     {
       var sqlConnection = new SqlConnection(_mainDatabase);
       var sqlCommand = new SqlCommand("DELETE FROM UserMessages WHERE Id = @id", sqlConnection);
-      foreach (var userMessage in messages)
+      try
       {
-        sqlCommand.Parameters.AddWithValue("@id", userMessage);
-        try
+        sqlConnection.Open();
+        foreach (var userMessage in messages)
         {
-          sqlConnection.Open();
+          sqlCommand.Parameters.AddWithValue("@id", userMessage);
           sqlCommand.ExecuteNonQuery();
+          sqlCommand.Parameters.Clear();
         }
-        catch (Exception)
-        {
-          Console.WriteLine("Something went wrong reading user");
-          throw;
-        }
-        finally
-        {
-          if (sqlConnection.State == ConnectionState.Open)
-            sqlConnection.Close();
-        }
+      }
+      catch (Exception)
+      {
+        Console.WriteLine("Something went wrong reading user");
+        throw;
+      }
+      finally
+      {
+        if (sqlConnection.State == ConnectionState.Open)
+          sqlConnection.Close();
       }
     }
 
