@@ -39,32 +39,83 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraSwich.cs" />
-     <Compile Include="Assets\Scripts\EventController.cs" />
-     <Compile Include="Assets\Scripts\LevelSwicher.cs" />
-     <Compile Include="Assets\Scripts\MainMenuGUI.cs" />
-     <Compile Include="Assets\Scripts\State1Controller.cs" />
-     <Compile Include="Assets\Scripts\State2Controller.cs" />
-     <Compile Include="Assets\Scripts\State3Controller.cs" />
-     <Compile Include="Assets\Scripts\StatusBar.cs" />
-     <Compile Include="Assets\Scripts\TextField.cs" />
-     <None Include="Assets\Models\Chair\readme.txt" />
-     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
-     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
-     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
-     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
+     <Compile Include="Assets\Charters\Warior\MyScripts\Mecanim_Control_melee.cs" />
+     <Compile Include="Assets\Materials\Standard Assets\Water (Pro Only)\Sources\Scripts\Water.cs" />
+     <Compile Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\Displace.cs" />
+     <Compile Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\WaterBase.cs" />
+     <Compile Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\Scripts\ArmyMenu\ArmyMenuGUI.cs" />
+     <Compile Include="Assets\Scripts\ArmyMenu\CharterSwicher.cs" />
+     <Compile Include="Assets\Scripts\BattleField\BattleFieldGUI.cs" />
+     <Compile Include="Assets\Scripts\BattleField\Button.cs" />
+     <Compile Include="Assets\Scripts\BattleField\Cell.cs" />
+     <Compile Include="Assets\Scripts\BattleField\CellEvent.cs" />
+     <Compile Include="Assets\Scripts\BattleField\Field.cs" />
+     <Compile Include="Assets\Scripts\BattleField\FieldCreater.cs" />
+     <Compile Include="Assets\Scripts\BattleField\Translator.cs" />
+     <Compile Include="Assets\Scripts\Field\AddSoldierController.cs" />
+     <Compile Include="Assets\Scripts\Field\Cell.cs" />
+     <Compile Include="Assets\Scripts\Field\Field.cs" />
+     <Compile Include="Assets\Scripts\Field\Soldier.cs" />
+     <Compile Include="Assets\Scripts\LoginMenu\LoginMenu.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Connection\BuyCommand.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Connection\GetStaticDataCommand.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Connection\GetUsersReadyForBattleCommand.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Connection\HTTPConnection.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Connection\ICommand.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Connection\Request.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Connection\SignInCommand.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Connection\SignUpCommand.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\GameObject.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\Resources.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\SoliderData.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\StaticData.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\Troop.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\User.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\UserGameData.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\UserMessage.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\UserMessageId.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Validators\IValidator.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Validators\SignInValidator.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Validators\SignUpValidator.cs" />
+     <Compile Include="Assets\Scripts\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Soldiers.cs" />
+     <Compile Include="Assets\Scripts\SoldiersController.cs" />
+     <Compile Include="Assets\Scripts\Tavern\TavernStates\EventController.cs" />
+     <Compile Include="Assets\Scripts\Tavern\TavernStates\State1Controller.cs" />
+     <Compile Include="Assets\Scripts\Tavern\TavernStates\State2Controller.cs" />
+     <Compile Include="Assets\Scripts\Tavern\TavernStates\State3Controller.cs" />
+     <Compile Include="Assets\Scripts\Tavern\TavernStates\Stats.cs" />
+     <None Include="Assets\Charters\Troll\Shader\Alpha_Texture.shader" />
+     <None Include="Assets\00_KY_FX pack2\prefab\01_shot\00_ReadMe.txt" />
+     <None Include="Assets\Charters\Troll\Shader\DoubleSided-Light-Spec.shader" />
+     <None Include="Assets\00_KY_FX pack2\ReadMe.txt" />
+     <None Include="Assets\Materials\Models\Chair\readme.txt" />
+     <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
+     <None Include="Assets\Materials\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Materials\Necromancer GUI\Kingthings.txt" />
+     <None Include="Assets\Materials\Necromancer GUI\Readme.txt" />
+     <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+     <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
+ <Reference Include="LitJson">
+ <HintPath>D:/Projects/HeroicBatle/Assets/Plagin/LitJson.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{63D477AA-B454-87E3-343F-04BE8711EF53}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{E06CFAC0-79AE-F558-832D-2782FAABFD20}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
