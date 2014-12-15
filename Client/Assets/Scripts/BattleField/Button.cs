@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.Field;
 
 public class Button : MonoBehaviour {
 	public Material Mat1;
 	public Material Mat2;
 	public int index;
 	public GameObject ButtonPlane;
-    public Translator Trans;
+    public AddSoldierController Controller;
 	
 	protected void OnMouseEnter()
 	{
@@ -19,6 +20,6 @@ public class Button : MonoBehaviour {
 	protected void OnMouseUp()
 	{
 		ButtonPlane.renderer.material = Mat2;
-        Trans.SetCharter(index);
+        Controller.SetCharter(index);
 	}
 }

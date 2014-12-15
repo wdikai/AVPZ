@@ -55,7 +55,6 @@
      <None Include="Assets\00_KY_FX pack2\prefab\01_shot\00_ReadMe.txt" />
      <None Include="Assets\Charters\Troll\Shader\DoubleSided-Light-Spec.shader" />
      <None Include="Assets\00_KY_FX pack2\ReadMe.txt" />
-     <None Include="Assets\Materials\Models\Chair\readme.txt" />
      <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
      <None Include="Assets\Materials\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Materials\Necromancer GUI\Kingthings.txt" />
@@ -64,26 +63,30 @@
      <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>D:/Projects/HeroicBatle/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>E:/Projects/Unity/HeroicBatle/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="Assembly-UnityScript">
- <HintPath>D:/Projects/HeroicBatle/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>E:/Projects/Unity/HeroicBatle/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="LitJson">
- <HintPath>D:/Projects/HeroicBatle/Assets/Plagin/LitJson.dll</HintPath>
+ <HintPath>E:/Projects/Unity/HeroicBatle/Assets/Plagin/LitJson.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
- <HintPath>D:/Projects/HeroicBatle/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+ <HintPath>E:/Projects/Unity/HeroicBatle/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.VisualStudio.Unity.Messaging">
- <HintPath>D:/Projects/HeroicBatle/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll</HintPath>
+ <HintPath>E:/Projects/Unity/HeroicBatle/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll</HintPath>
  </Reference>
  <Reference Include="UnityVS.VersionSpecific">
- <HintPath>D:/Projects/HeroicBatle/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll</HintPath>
+ <HintPath>E:/Projects/Unity/HeroicBatle/Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-vs.csproj">
+      <Project>{0E0DE6DC-6540-114C-EC46-0C80EDBF8196}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

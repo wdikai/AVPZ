@@ -2,7 +2,13 @@
 using System.Collections;
 
 public class State1Controller : EventController {
-    
+
+    public Texture2D WariorTexture2D;
+    public Texture2D TrollTexture2D;
+    public Texture2D IceGolemTexture2D;
+    public Texture2D Sheild;
+    public Texture2D Cristalys;
+
     public new void OnGUI()
     {
         if (base.enabledMenu)
@@ -22,7 +28,59 @@ public class State1Controller : EventController {
         {
             this.enabledMenu = false;
         }
-        GUI.Label(new Rect(470, 65, 270, 80), GUI.tooltip, GUIStyle.none);
+        //GUI.Label(new Rect(470, 65, 270, 80), GUI.tooltip, GUIStyle.none);
+
+
         GUI.EndGroup();
+
+        GUI.BeginGroup(windowRect);
+        GUI.Label(new Rect(20, 80, 300, 50), "Общий бонус к Защите войск", GUIStyle.none);
+        GUI.DrawTexture(new Rect(50, 110, 140, 170), Sheild, ScaleMode.ScaleToFit, true, 1.0f);
+        if (GUI.Button(new Rect(160,250, 50, 40), new GUIContent("+1", "Увеличить количество брони")))
+        {
+            ///Покупка брони
+        }
+        DrawDefence(0, 270, 120, 110, 110, WariorTexture2D, "Warior", 0);
+        DrawDefence(0, 560, 120, 110, 110, TrollTexture2D, "Troll", 1);
+        DrawDefence(0, 835, 120, 110, 110, IceGolemTexture2D, "Ice Golem", 2);
+
+        GUI.Label(new Rect(20, 310, 300, 0), "Общий бонус к Атаке войск", GUIStyle.none);
+        GUI.DrawTexture(new Rect(50, 340, 140, 170), Cristalys, ScaleMode.ScaleToFit, true, 1.0f);
+        if (GUI.Button(new Rect(160, 450, 50, 40), new GUIContent("+1", "Увеличить количество брони")))
+        {
+            ///Покупка брони
+        }
+        DrawDemage(0, 270, 340, 110, 110, WariorTexture2D, "Warior", 0);
+        DrawDemage(0, 560, 340, 110, 110, TrollTexture2D, "Troll", 1);
+        DrawDemage(0, 835, 340, 110, 110, IceGolemTexture2D, "Ice Golem", 2);
+
+
+        GUI.Label(new Rect(520, 70, 270, 80), GUI.tooltip, GUIStyle.none);
+    }
+
+    void DrawDefence(int count, int left, int top, int width, int height, Texture2D Image, string CharterName, int index)
+    {
+        if (GUI.Button(new Rect(left + 127, top + 5, 50, 50), new GUIContent("+1", "Увеличить количество брони")))
+        {
+            ///Покупка брони
+        }
+        GUI.skin.label.fontSize = 16;
+        GUI.DrawTexture(new Rect(left, top, width, height), Image, ScaleMode.ScaleToFit, true, 1.0f);
+        GUI.Box(new Rect(left - 20, top - 25, width + 50, height + 70), CharterName);
+        GUI.Label(new Rect(left - 15, top + 120, 150, 40), new GUIContent("Защита ", "Сопротевляемость к урону "));
+
+    }
+
+    void DrawDemage(int count, int left, int top, int width, int height, Texture2D Image, string CharterName, int index)
+    {
+        if (GUI.Button(new Rect(left + 127, top + 5, 50, 50), new GUIContent("+1", "Увеличить количество урона")))
+        {
+            ///Покупка брони
+        }
+        GUI.skin.label.fontSize = 16;
+        GUI.DrawTexture(new Rect(left, top, width, height), Image, ScaleMode.ScaleToFit, true, 1.0f);
+        GUI.Box(new Rect(left - 20, top - 25, width + 50, height + 70), CharterName);
+        GUI.Label(new Rect(left - 15, top + 120, 150, 40), new GUIContent("Атака ", "Урон наносимый персонажем "));
+
     }
 }

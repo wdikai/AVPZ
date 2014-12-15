@@ -89,7 +89,6 @@
     <None Include="Assets\00_KY_FX pack2\ReadMe.txt" />
     <None Include="Assets\Charters\Troll\Shader\Alpha_Texture.shader" />
     <None Include="Assets\Charters\Troll\Shader\DoubleSided-Light-Spec.shader" />
-    <None Include="Assets\Materials\Models\Chair\readme.txt" />
     <None Include="Assets\Materials\Necromancer GUI\Kingthings.txt" />
     <None Include="Assets\Materials\Necromancer GUI\Readme.txt" />
     <None Include="Assets\Materials\Standard Assets\Skyboxes\_skybox info.txt" />

@@ -51,7 +51,6 @@
      <None Include="Assets\00_KY_FX pack2\prefab\01_shot\00_ReadMe.txt" />
      <None Include="Assets\Charters\Troll\Shader\DoubleSided-Light-Spec.shader" />
      <None Include="Assets\00_KY_FX pack2\ReadMe.txt" />
-     <None Include="Assets\Materials\Models\Chair\readme.txt" />
      <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
      <None Include="Assets\Materials\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Materials\Necromancer GUI\Kingthings.txt" />
@@ -60,7 +59,7 @@
      <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
      <None Include="Assets\Materials\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
  <Reference Include="LitJson">
- <HintPath>D:/Projects/HeroicBatle/Assets/Plagin/LitJson.dll</HintPath>
+ <HintPath>E:/Projects/Unity/HeroicBatle/Assets/Plagin/LitJson.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

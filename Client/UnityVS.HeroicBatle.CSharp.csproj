@@ -7,14 +7,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{514D7A9E-9D8B-F715-43A5-B7478D76E8F0}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>4.5.2f1</UnityVersion>
@@ -70,39 +72,48 @@
     <Compile Include="Assets\Scripts\ArmyMenu\CharterSwicher.cs" />
     <Compile Include="Assets\Scripts\BattleField\BattleFieldGUI.cs" />
     <Compile Include="Assets\Scripts\BattleField\Button.cs" />
-    <Compile Include="Assets\Scripts\BattleField\Cell.cs" />
-    <Compile Include="Assets\Scripts\BattleField\CellEvent.cs" />
-    <Compile Include="Assets\Scripts\BattleField\Field.cs" />
-    <Compile Include="Assets\Scripts\BattleField\FieldCreater.cs" />
-    <Compile Include="Assets\Scripts\BattleField\Translator.cs" />
-    <Compile Include="Assets\Scripts\Field\AddSoldierController.cs" />
-    <Compile Include="Assets\Scripts\Field\Cell.cs" />
-    <Compile Include="Assets\Scripts\Field\Field.cs" />
-    <Compile Include="Assets\Scripts\Field\Soldier.cs" />
+    <Compile Include="Assets\Scripts\GameControllers\AddSoldierController.cs" />
+    <Compile Include="Assets\Scripts\GameControllers\Cell.cs" />
+    <Compile Include="Assets\Scripts\GameControllers\CellEvent.cs" />
+    <Compile Include="Assets\Scripts\GameControllers\EventsController.cs" />
+    <Compile Include="Assets\Scripts\GameControllers\Field.cs" />
+    <Compile Include="Assets\Scripts\GameControllers\Soldier.cs" />
     <Compile Include="Assets\Scripts\LoginMenu\LoginMenu.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Connection\AcceptBattleCall.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Connection\BuyCommand.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Connection\BuyTalantCommand.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Connection\GetStaticDataCommand.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Connection\GetUsersReadyForBattleCommand.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Connection\HTTPConnection.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Connection\ICommand.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Connection\RefreshCommand.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Connection\Request.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Connection\SendBattleCall.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Connection\SignInCommand.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Connection\SignUpCommand.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Message\AttackMessage.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Message\DefeatMessage.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Message\InitMessage.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Message\MessageType.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Message\SkipMessage.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Message\StepMessage.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Model\GameObject.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Model\Resources.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Model\SoliderData.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Model\StaticData.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Model\Troop.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Model\UnitUpgrade.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\Model\UpgradeType.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Model\User.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Model\UserGameData.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Model\UserMessage.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Model\UserMessageId.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\P2P\Client.cs" />
+    <Compile Include="Assets\Scripts\ServerTools\P2P\Server.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Validators\IValidator.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Validators\SignInValidator.cs" />
     <Compile Include="Assets\Scripts\ServerTools\Validators\SignUpValidator.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
-    <Compile Include="Assets\Scripts\Soldiers.cs" />
-    <Compile Include="Assets\Scripts\SoldiersController.cs" />
     <Compile Include="Assets\Scripts\Tavern\TavernStates\EventController.cs" />
     <Compile Include="Assets\Scripts\Tavern\TavernStates\State1Controller.cs" />
     <Compile Include="Assets\Scripts\Tavern\TavernStates\State2Controller.cs" />
@@ -114,7 +125,6 @@
     <None Include="Assets\00_KY_FX pack2\ReadMe.txt" />
     <None Include="Assets\Charters\Troll\Shader\Alpha_Texture.shader" />
     <None Include="Assets\Charters\Troll\Shader\DoubleSided-Light-Spec.shader" />
-    <None Include="Assets\Materials\Models\Chair\readme.txt" />
     <None Include="Assets\Materials\Necromancer GUI\Kingthings.txt" />
     <None Include="Assets\Materials\Necromancer GUI\Readme.txt" />
     <None Include="Assets\Materials\Standard Assets\Skyboxes\_skybox info.txt" />

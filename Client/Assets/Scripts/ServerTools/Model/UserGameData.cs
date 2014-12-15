@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using TestClient.Model;
 
 namespace Model
 {
@@ -11,6 +10,8 @@ namespace Model
 
         public Resources CurrentResources;
         public List<Troop> AllTroops;
+
         public List<UserMessage> PendingMessages;
+        public List<UnitUpgrade> UnitUpgrades;
     }
 }
