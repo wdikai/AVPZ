@@ -6,7 +6,7 @@ using System.Text;
 
 namespace TCP.P2P
 {
-    class Client
+    public class Client
     {
         
 
@@ -22,18 +22,25 @@ namespace TCP.P2P
 
         public void SendMessageSocket(string _message)
         {
-            String data = "";
-            byte[] buffer = new byte[1024];
-            _sender = new TcpClient();
-            _sender.Connect(_serverAddress, _port);
-            NetworkStream io = _sender.GetStream();
+            try
+            {
+                String data = "";
+                byte[] buffer = new byte[1024];
+                _sender = new TcpClient();
+                _sender.Connect(_serverAddress, _port);
+                NetworkStream io = _sender.GetStream();
 
-            Console.Write("Введите сообщение: ");
-            Write(io, _message);
+                Console.Write("Введите сообщение: ");
+                Write(io, _message);
 
-            data = Read(io);
-            Console.WriteLine("Massege:\n {0}", data);
-            _sender.Close();
+                data = Read(io);
+                Console.WriteLine("Massege:\n {0}", data);
+                _sender.Close();
+            }
+            catch (Exception)
+            { 
+            
+            }
         }
 
        

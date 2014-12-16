@@ -10,6 +10,7 @@ namespace Connection
         private int _userId;
         private int _unitId;
         private UpgradeType _type;
+        public User UData;
         public String Error { get; private set; }
 
         public BuyTalantCommand(int userId, int unitId, UpgradeType type)
@@ -39,7 +40,7 @@ namespace Connection
 				String inner = outer["response"].ToString();
 				try
 				{
-					User Data = JsonMapper.ToObject<User>(inner);
+					UData = JsonMapper.ToObject<User>(inner);
 				}
 				catch (Exception)
 				{

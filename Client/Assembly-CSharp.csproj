@@ -86,6 +86,7 @@
      <Compile Include="Assets\Scripts\ServerTools\Message\StepMessage.cs" />
      <Compile Include="Assets\Scripts\ServerTools\Model\GameObject.cs" />
      <Compile Include="Assets\Scripts\ServerTools\Model\Resources.cs" />
+     <Compile Include="Assets\Scripts\ServerTools\Model\Sold.cs" />
      <Compile Include="Assets\Scripts\ServerTools\Model\SoliderData.cs" />
      <Compile Include="Assets\Scripts\ServerTools\Model\StaticData.cs" />
      <Compile Include="Assets\Scripts\ServerTools\Model\Troop.cs" />

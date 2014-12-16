@@ -33,7 +33,7 @@ public class Cell : MonoBehaviour
     }// Событие при выходе курсора за границы ячейки 
     void OnMouseUp()// Событие при нажатии на ячейку 
     {
-        CellModel.renderer.material = SelectedCell;
-        EventControll.CellClick(this);
+            CellModel.renderer.material = SelectedCell;
+            EventControll.CellClick(this);
     }
 }

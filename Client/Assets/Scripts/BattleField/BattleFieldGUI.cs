@@ -15,7 +15,7 @@ public class BattleFieldGUI : MonoBehaviour
         GUI.skin = Skin;
         if (GUI.Button(new Rect(920, 20, 200, 50), "Покинуть бой"))
         {
-            //Application.LoadLevel(1);
+            Application.LoadLevel(1);
         }
 
     }
