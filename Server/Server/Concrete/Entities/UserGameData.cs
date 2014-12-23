@@ -13,11 +13,19 @@ namespace Server.Concrete.Entities
     public List<Troops> AllTroops;
 
     public List<UserMessage> PendingMessages;
+    public List<UnitUpgrade> UnitUpgrades;
   }
 
   public class Troops
   {
     public int Id;
     public int Count;
+  }
+
+  public class UnitUpgrade
+  {
+    public int UnitId;
+    public int AttackPoints;
+    public int DefencePoints;
   }
 }

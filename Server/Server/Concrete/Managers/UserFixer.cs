@@ -16,12 +16,14 @@ namespace Server.Concrete.Managers
           AllTroops = new List<Troops>(),
           CurrentResources = new Resources(),
         };
-      if(user.GameData.AllTroops==null)
+      if (user.GameData.AllTroops == null)
         user.GameData.AllTroops = new List<Troops>();
-      if(user.GameData.CurrentResources==null)
-        user.GameData.CurrentResources=new Resources();
-      if(user.GameData.PendingMessages==null)
+      if (user.GameData.CurrentResources == null)
+        user.GameData.CurrentResources = new Resources();
+      if (user.GameData.PendingMessages == null)
         user.GameData.PendingMessages = new List<UserMessage>();
+      if (user.GameData.UnitUpgrades == null)
+        user.GameData.UnitUpgrades = new List<UnitUpgrade>();
 
       DatabaseManager.UpdateUserGameData(user);
     }
