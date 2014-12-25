@@ -81,6 +81,7 @@
     <Compile Include="Concrete\Entities\UserGameData.cs" />
     <Compile Include="Concrete\Entities\UserMessage.cs" />
     <Compile Include="Concrete\Managers\BattleFinder.cs" />
+    <Compile Include="Concrete\Managers\BattleManager.cs" />
     <Compile Include="Concrete\Managers\DatabaseManager.cs" />
     <Compile Include="Concrete\Managers\MessageManager.cs" />
     <Compile Include="Concrete\Managers\PollingManager.cs" />

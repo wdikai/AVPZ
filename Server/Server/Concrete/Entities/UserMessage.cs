@@ -8,7 +8,8 @@ namespace Server.Concrete.Entities
   public enum UserMessageId
   {
     BattleCall = 0,
-    BattleAccept = 1
+    BattleAccept = 1,
+    StartBattle = 2
   }
 
   public class UserMessage
